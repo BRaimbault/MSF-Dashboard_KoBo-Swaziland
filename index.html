@@ -1,0 +1,113 @@
+ <!--
+
+	MSF KoBo Dashboard - index.html
+	(c) Bruno Raimbault for MSF
+	Please refer to the README.txt for complete licenses. 
+
+-->
+
+<html>
+    <head>
+        <title>MSF KoBo Dashboard v0.1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Lib: jQuery -->
+        <script src="lib/jquery/jquery-2.2.0.min.js"></script>
+       
+        <!-- Lib: Bootstrap -->
+        <link href="lib/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <script src="lib/bootstrap/bootstrap.min.js"></script>
+
+        <!-- Lib: Crossfliter -->
+        <script src="lib/crossfilter/crossfilter.min.js"></script>
+        
+        <!-- Lib: D3 -->
+        <script src="lib/d3/d3.min.js"></script>
+
+        <!-- Lib: D3-queue -->
+        <script src="lib/d3-queue/queue.v1.min.js"></script>
+
+        <!-- Lib: geostats -->
+        <script src="lib/geostats/geostats.min.js"></script> 
+
+        <!-- Lib: DC -->
+        <link href="lib/dc/dc.min.css" rel="stylesheet" type="text/css"/>
+        <script src="lib/dc/dc.min.js"></script>
+
+        <!-- Lib: Leaflet -->
+        <script>L_PREFER_CANVAS = true;</script>
+        <link href="lib/leaflet/leaflet.css" rel="stylesheet" type="text/css"/>
+        <script src="lib/leaflet/leaflet.js"></script>
+
+        <!-- Lib: L.Map.Sync -->
+        <script src="lib/leaflet.sync/L.Map.Sync.js"></script>
+
+        <!-- Lib: datatables -->
+        <link href="lib/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+        <script src="lib/datatables/jquery.dataTables.min.js"></script>
+        <link href="lib/datatables/buttons.dataTables.min.css" rel="stylesheet" type="text/css"/>
+        <script src="lib/datatables/buttons.html5.min.js"></script>
+        <script src="lib/datatables/dataTables.buttons.min.js"></script>
+
+        <!-- Lib: leaflet.image -->
+        <script src="lib/leaflet.image/leaflet-image.js"></script>
+        <script src="lib/leaflet.image/dc-image.js"></script>
+        
+        <!-- Lib: intro -->
+        <link href="lib/intro/introjs.css" rel="stylesheet" type="text/css"/>
+        <script src="lib/intro/intro.js"></script>
+
+        <!-- Website: .css -->
+        <link href="css/index.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <body>
+
+<!--**************************************************************************************
+**************************************************************************************-->
+
+        <div class="container">
+
+            <!-- Header -->
+            <div id="header" class="row">
+                <h2 id="title">MSF KoBo Dashboard v0.1 | Draft</h2>
+                <div class="col-md-12">  
+                    <p id="main_description"></p>
+                </div>                 
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="form-data"</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Login -->
+        <div id="modal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content"></div>
+            </div>
+        </div>
+
+<!--**************************************************************************************
+**************************************************************************************-->
+        <script>
+            modal_loading();
+
+            function modal_loading() {
+                $('.modal-content').html('<div id="loading" class="modal-body"><h2>Loading...</h2></div>');
+            }
+
+            $('#modal').modal({
+                backdrop: 'static',
+                keyboard: false
+            });
+
+            $('#modal').modal('show');
+        </script>
+        <script src="main.js"></script> 
+    </body>
+</html>
